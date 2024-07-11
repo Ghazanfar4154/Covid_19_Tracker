@@ -19,6 +19,11 @@ class _WorldScreenState extends State<WorldScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: Text("Covid-19 Tracker"),
+        actions: null,
+        leading: null,
+      ),
       body: FutureBuilder(
           future:StatesServices.fetchWorldStatesRecord() ,
           builder: (context,AsyncSnapshot<WorldStatesModel?> snapshot){

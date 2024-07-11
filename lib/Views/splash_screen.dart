@@ -26,7 +26,7 @@ class _SplashScreenState extends State<SplashScreen> with TickerProviderStateMix
     Timer(
         Duration(seconds: 5),
             () {
-          Navigator.push(context, MaterialPageRoute(builder: (context) {
+          Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) {
             return WorldScreen();
           }));
           animationController.dispose();

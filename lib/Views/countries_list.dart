@@ -24,7 +24,7 @@ class _CountriesListScreenState extends State<CountriesListScreen> {
         backgroundColor: Theme.of(context).scaffoldBackgroundColor,
       ),
       body: Padding(
-        padding: const EdgeInsets.all(10.0),
+        padding: const EdgeInsets.all(7.0),
         child: FutureBuilder(
           future: StatesServices.fetchCountryList(),
           builder: (context, AsyncSnapshot<List<CountryListModel>> snapshot) {
@@ -56,7 +56,8 @@ class _CountriesListScreenState extends State<CountriesListScreen> {
                   )
                 ],
               );
-            } else {
+            }
+            else {
               return Shimmer.fromColors(
                   baseColor: Colors.grey.shade700,
                   highlightColor: Colors.grey.shade100,
